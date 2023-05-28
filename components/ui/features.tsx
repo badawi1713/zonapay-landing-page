@@ -1,5 +1,7 @@
+"use client";
 import React from "react";
 import { MdPhonelinkRing, MdPointOfSale, MdStickyNote2 } from "react-icons/md";
+import { motion } from "framer-motion";
 
 function Features() {
   const data = [
@@ -29,12 +31,20 @@ function Features() {
   return (
     <section className="bg-gray-50" id="layanan">
       <div className="container mx-auto flex flex-col gap-8 px-8 py-16">
-        <h2 className="mb-4 text-center text-2xl font-semibold text-blue">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.7 }}
+          className="mb-4 text-center text-2xl font-semibold text-blue"
+        >
           Layanan
-        </h2>
+        </motion.h2>
         <div className="grid w-full grid-cols-1 gap-4 lg:grid-cols-3">
           {data?.map((item) => (
-            <div
+            <motion.div
+              initial={{ scale: 0 }}
+              whileInView={{ scale: 1 }}
+              transition={{ duration: 1 }}
               key={item.id}
               className="flex h-full max-h-80 w-full flex-col items-center gap-4 rounded-md border border-gray-300 bg-gradient-to-tl from-gradientBlueX to-gradientBlueY p-4 shadow-sm"
             >
@@ -45,7 +55,7 @@ function Features() {
               <p className="text-center text-lg text-white">
                 {item.description}
               </p>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

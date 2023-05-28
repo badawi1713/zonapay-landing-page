@@ -1,11 +1,17 @@
 import Image from "next/image";
 import React from "react";
+import { motion } from "framer-motion";
 
 function About() {
   return (
     <section className="bg-white" id="tentang-kami">
       <div className="container mx-auto flex flex-col-reverse gap-8 px-8 py-16 md:flex-row">
-        <div className="flex h-80 w-full flex-col justify-center rounded-sm md:items-center">
+        <motion.div
+          initial={{ scale: 0 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.7 }}
+          className="flex h-80 w-full flex-col justify-center rounded-sm md:items-center"
+        >
           <Image
             className="hidden drop-shadow-xl md:block"
             src={"/assets/images/img-mobile-preview.png"}
@@ -20,8 +26,12 @@ function About() {
             height={320}
             alt="zonapay-preview-2"
           />
-        </div>
-        <article>
+        </motion.div>
+        <motion.article
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+        >
           <h2 className="mb-4 text-2xl font-semibold text-primary1">
             Tentang Kami
           </h2>
@@ -32,7 +42,7 @@ function About() {
             PLN, PDAM, Pulsa, dan lainnya. Sangat sesuai untuk UKM karena
             dilengkapi fitur kasir dan pencatatan keuangan.
           </p>
-        </article>
+        </motion.article>
       </div>
     </section>
   );

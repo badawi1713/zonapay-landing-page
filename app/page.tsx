@@ -1,9 +1,8 @@
-import Hero from "@/components/ui/hero";
-import Footer from "@/components/ui/footer";
-import React from "react";
 import About from "@/components/ui/about";
-import Features from "@/components/ui/features";
 import Contact from "@/components/ui/contact";
+import Features from "@/components/ui/features";
+import Footer from "@/components/ui/footer";
+import Hero from "@/components/ui/hero";
 
 function Home() {
   return (

@@ -9,31 +9,33 @@ function Footer() {
         <section className="flex flex-col justify-between gap-8 lg:flex-row">
           <div className="flex gap-8">
             <div className="flex flex-col gap-4">
-              <address className="text-lg font-semibold not-italic text-white">
-                Jl. Taman Surya No. 1 Surabaya
+              <address>
+                <p className="text-sm not-italic text-white lg:text-lg">
+                  Jl. Taman Surya No. 1 Surabaya
+                </p>
               </address>
-              <h6 className="text-lg font-semibold text-white">
+              <h6 className="text-sm text-white lg:text-lg">
                 <a href="mailto:support@intilink.com">support@intilink.com</a>
               </h6>
-              <h6 className="text-lg font-semibold text-white">
+              <h6 className="text-sm text-white lg:text-lg">
                 <a href="https://wa.me/6282136526483">+62 821 3652 6483</a>
               </h6>
             </div>
             <div className="hidden flex-col gap-4 md:flex lg:ml-20">
               <a
-                className="font-regular text-lg text-white hover:text-primary2"
+                className="font-regular text-sm text-white hover:text-primary2 lg:text-lg"
                 href="#tentang-kami"
               >
                 Tentang Kami
               </a>
               <a
-                className="font-regular text-lg text-white hover:text-primary2"
+                className="font-regular text-sm text-white hover:text-primary2 lg:text-lg"
                 href="#layanan"
               >
                 Layanan
               </a>
               <a
-                className="font-regular text-lg text-white hover:text-primary2"
+                className="font-regular text-sm text-white hover:text-primary2 lg:text-lg"
                 href="#kontak"
               >
                 Kontak
@@ -51,7 +53,9 @@ function Footer() {
                 height={50}
               />
             </a>
-            <p className="text-white">&copy;{year} - Zonapay</p>
+            <p className="text-sm text-white lg:text-lg">
+              &copy;{year} - Zonapay
+            </p>
           </div>
         </section>
       </div>
