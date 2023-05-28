@@ -1,0 +1,41 @@
+import Image from "next/image";
+import React from "react";
+
+function About() {
+  return (
+    <section className="bg-white" id="tentang-kami">
+      <div className="container mx-auto flex flex-col-reverse gap-8 px-8 py-16 md:flex-row">
+        <div className="flex h-80 w-full flex-col justify-center rounded-sm md:items-center">
+          <Image
+            className="hidden drop-shadow-xl md:block"
+            src={"/assets/images/img-mobile-preview.png"}
+            width={170}
+            height={300}
+            alt="zonapay-preview-2"
+          />
+          <Image
+            className="mx-auto drop-shadow-xl md:hidden"
+            src={"/assets/images/img-mobile-preview-2.png"}
+            width={280}
+            height={320}
+            alt="zonapay-preview-2"
+          />
+        </div>
+        <article>
+          <h2 className="mb-4 text-2xl font-semibold text-primary1">
+            Tentang Kami
+          </h2>
+          <p className="text-lg">
+            Zonapay merupakan produk andalan yang dimiliki{" "}
+            <span className="text-secondary1">PT Intilink Multi Biller</span>,
+            aplikasi berbasis server untuk melayani pembayaran tagihan seperti;
+            PLN, PDAM, Pulsa, dan lainnya. Sangat sesuai untuk UKM karena
+            dilengkapi fitur kasir dan pencatatan keuangan.
+          </p>
+        </article>
+      </div>
+    </section>
+  );
+}
+
+export default About;
