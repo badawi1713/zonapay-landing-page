@@ -104,7 +104,7 @@ function Navbar() {
         </ul>
         <button onClick={toggleSidebar} className="ml-auto md:hidden">
           <HiMenu
-            fontSize={24}
+            fontSize={32}
             className={`text-xl ${
               animateHeader ? "text-primary1" : "text-white"
             }`}
@@ -134,17 +134,17 @@ function Navbar() {
                 </button>
               </header>
               <ul className="flex flex-col gap-3">
-                <li className="text-primary1 md:font-medium">
+                <li className="hover:text-primary1 md:font-medium">
                   <a onClick={toggleSidebar} href={"#tentang-kami"}>
                     Tentang Kami
                   </a>
                 </li>
-                <li className="text-primary1 md:font-medium">
+                <li className="hover:text-primary1 md:font-medium">
                   <a onClick={toggleSidebar} href={"#layanan"}>
                     Layanan
                   </a>
                 </li>
-                <li className="text-primary1 md:font-medium">
+                <li className="hover:text-primary1 md:font-medium">
                   <a onClick={toggleSidebar} href={"#kontak"}>
                     Kontak
                   </a>

@@ -11,14 +11,15 @@ function Footer() {
             <div className="flex flex-col gap-4">
               <address>
                 <p className="text-sm not-italic text-white lg:text-lg">
-                  Jl. Taman Surya No. 1 Surabaya
+                  Graha Bukopin lt. 7. Jl. Panglima Sudirman no. 10-18, Genteng
+                  Surabaya
                 </p>
               </address>
               <h6 className="text-sm text-white lg:text-lg">
                 <a href="mailto:support@intilink.com">support@intilink.com</a>
               </h6>
               <h6 className="text-sm text-white lg:text-lg">
-                <a href="https://wa.me/6282136526483">+62 821 3652 6483</a>
+                <a href="https://wa.me/6281257584886">+62 812 5758 4886</a>
               </h6>
             </div>
             <div className="hidden flex-col gap-4 md:flex lg:ml-20">
