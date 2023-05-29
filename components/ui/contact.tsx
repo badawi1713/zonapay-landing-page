@@ -12,7 +12,7 @@ function Contact() {
           <p className="not-italic">Jl. Taman Surya No. 1 Surabaya</p>
         </address>
       ),
-      icon: <MdHomeWork className="text-primary1" fontSize={20} />,
+      icon: <MdHomeWork className="text-primary1" fontSize={32} />,
     },
     {
       id: 2,
@@ -22,7 +22,7 @@ function Contact() {
           support@intilink.com
         </a>
       ),
-      icon: <MdPhoneAndroid className="text-primary1 " fontSize={20} />,
+      icon: <MdPhoneAndroid className="text-primary1 " fontSize={32} />,
     },
     {
       id: 3,
@@ -32,7 +32,7 @@ function Contact() {
           +62 821 3652 6483
         </a>
       ),
-      icon: <MdEmail className="text-primary1 " fontSize={20} />,
+      icon: <MdEmail className="text-primary1 " fontSize={32} />,
     },
   ];
 

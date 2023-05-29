@@ -104,6 +104,7 @@ function Navbar() {
         </ul>
         <button onClick={toggleSidebar} className="ml-auto md:hidden">
           <HiMenu
+            fontSize={24}
             className={`text-xl ${
               animateHeader ? "text-primary1" : "text-white"
             }`}
@@ -118,7 +119,7 @@ function Navbar() {
               animate={{ x: isOpen ? 0 : 1000 }}
               exit={{ x: 1000 }}
               transition={{ duration: 0.7 }}
-              className="absolute right-0 top-0 z-10 flex h-full w-2/4 flex-col gap-8 bg-white p-3 transition md:w-1/4"
+              className="absolute right-0 top-0 z-10 flex h-full w-2/4 flex-col gap-8 overflow-auto bg-white p-3 transition md:w-1/4"
             >
               <header className="flex w-full items-center justify-between gap-3">
                 <Image
@@ -129,21 +130,21 @@ function Navbar() {
                   height={40}
                 />
                 <button onClick={toggleSidebar} className="ml-auto">
-                  <HiOutlineX />
+                  <HiOutlineX fontSize={24} />
                 </button>
               </header>
               <ul className="flex flex-col gap-3">
-                <li className="text-xs text-primary1 md:text-sm md:font-medium">
+                <li className="text-primary1 md:font-medium">
                   <a onClick={toggleSidebar} href={"#tentang-kami"}>
                     Tentang Kami
                   </a>
                 </li>
-                <li className="text-xs text-primary1 md:text-sm md:font-medium">
+                <li className="text-primary1 md:font-medium">
                   <a onClick={toggleSidebar} href={"#layanan"}>
                     Layanan
                   </a>
                 </li>
-                <li className="text-xs text-primary1 md:text-sm md:font-medium">
+                <li className="text-primary1 md:font-medium">
                   <a onClick={toggleSidebar} href={"#kontak"}>
                     Kontak
                   </a>
