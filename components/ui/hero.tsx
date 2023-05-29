@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function Hero() {
   return (
-    <section className="relative h-auto overflow-hidden bg-gradient-to-b from-gradientBlueX to-gradientBlueY lg:static lg:max-h-screen lg:min-h-screen">
+    <header className="relative h-auto overflow-hidden bg-gradient-to-b from-gradientBlueX to-gradientBlueY lg:static lg:max-h-screen lg:min-h-screen">
       <div
         className="absolute top-0 z-0 hidden h-full w-full overflow-hidden bg-contain bg-no-repeat opacity-30 lg:right-0 lg:flex"
         style={{
@@ -89,7 +89,7 @@ function Hero() {
           backgroundImage: "url('/assets/images/img-mobile-preview.png')",
         }}
       />
-    </section>
+    </header>
   );
 }
 

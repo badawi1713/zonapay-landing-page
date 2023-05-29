@@ -6,7 +6,7 @@ const urbanist = Urbanist({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Zonapay",
-  description: "Zonapay",
+  description: " Pakai Zonapay, bebas bayar apa saja dan menguntungkan!",
   icons: {
     icon: "/favicon.ico",
   },
