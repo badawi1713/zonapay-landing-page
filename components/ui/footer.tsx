@@ -4,7 +4,7 @@ import React from "react";
 function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="w-full bg-blue">
+    <footer className="w-full bg-gradientBlueX">
       <div className="container px-8 py-14">
         <section className="flex flex-col justify-between gap-8 lg:flex-row">
           <div className="flex gap-8">
