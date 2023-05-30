@@ -23,7 +23,7 @@ function Hero() {
           <h2 className="mb-4 text-2xl font-bold text-white lg:w-2/3 lg:text-4xl 2xl:text-5xl">
             Aplikasi untuk Semua Pembayaran
           </h2>
-          <h5 className="mb-8 w-full font-light text-white sm:w-4/6 lg:w-2/3 2xl:text-xl">
+          <h5 className="mb-8 w-full font-light text-white xs:w-4/6 lg:w-2/3 2xl:text-xl">
             Pakai Zonapay, bebas bayar apa saja dan menguntungkan!
           </h5>
           <Button className="w-full xs:w-auto">Coming Soon</Button>
