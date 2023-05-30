@@ -9,7 +9,7 @@ function Contact() {
       title: "Alamat",
       description: (
         <address>
-          <p className="not-italic">
+          <p className="text-center not-italic">
             Graha Bukopin lt. 7. Jl. Panglima Sudirman no. 10-18, Genteng
             Surabaya
           </p>
