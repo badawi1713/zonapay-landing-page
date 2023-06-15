@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 function Footer() {
@@ -45,6 +46,12 @@ function Footer() {
               >
                 Kontak
               </a>
+              <Link
+                className="font-regular text-sm text-white hover:text-primary2"
+                href="/syarat-dan-ketentuan"
+              >
+                Syarat dan Ketentuan
+              </Link>
             </div>
           </div>
 

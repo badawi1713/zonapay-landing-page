@@ -3,10 +3,14 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 import { HiMenu, HiOutlineX } from "react-icons/hi";
 import { motion, AnimatePresence } from "framer-motion";
+import { usePathname, useRouter } from "next/navigation";
+import Link from "next/link";
 
 function Navbar() {
+  const pathname = usePathname();
   const [animateHeader, setAnimateHeader] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
+  const [currentPage, setCurrentPage] = useState("/");
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -18,6 +22,12 @@ function Navbar() {
       document.documentElement.style.overflow = "auto";
     }
   };
+
+  useEffect(() => {
+    if (pathname !== currentPage) {
+      setCurrentPage(pathname);
+    }
+  }, [currentPage, pathname]);
 
   useEffect(() => {
     const listener = () => {
@@ -38,12 +48,14 @@ function Navbar() {
       } top-0 z-20 w-full duration-500 ease-in-out lg:fixed ${
         animateHeader
           ? "bg-white shadow-xl"
-          : " bg-gradientBlueX lg:bg-transparent"
+          : `bg-gradientBlueX ${
+              currentPage === "/" ? "lg:bg-transparent" : "lg:bg-gradientBlueX "
+            }`
       }`}
     >
       <div className="container flex items-center py-3 md:py-4">
         {/* <h1 className="text-xl text-white md:text-3xl">Zonapay</h1> */}
-        <a href="#">
+        <Link href="/#">
           <Image
             className="mt-1.5 block h-auto lg:hidden"
             src={
@@ -77,7 +89,7 @@ function Navbar() {
             width={130}
             height={50}
           />
-        </a>
+        </Link>
         <ul className="ml-auto hidden items-center gap-8 md:flex">
           {/* <ul className="ml-auto flex items-center gap-3 md:gap-8"> */}
           <li
@@ -85,21 +97,21 @@ function Navbar() {
               animateHeader ? "text-primary1" : "text-white"
             } lg:text-lg`}
           >
-            <a href={"#tentang-kami"}>Tentang Kami</a>
+            <Link href={"/#tentang-kami"}>Tentang Kami</Link>
           </li>
           <li
             className={`text-xs md:text-sm md:font-medium ${
               animateHeader ? "text-primary1" : "text-white"
             } lg:text-lg`}
           >
-            <a href={"#layanan"}>Layanan</a>
+            <Link href={"/#layanan"}>Layanan</Link>
           </li>
           <li
             className={`text-xs md:text-sm md:font-medium ${
               animateHeader ? "text-primary1" : "text-white"
             } lg:text-lg`}
           >
-            <a href={"#kontak"}>Kontak</a>
+            <Link href={"/#kontak"}>Kontak</Link>
           </li>
         </ul>
         <button onClick={toggleSidebar} className="ml-auto md:hidden">
@@ -135,19 +147,24 @@ function Navbar() {
               </header>
               <ul className="flex flex-col gap-3">
                 <li className="hover:text-primary1 md:font-medium">
-                  <a onClick={toggleSidebar} href={"#tentang-kami"}>
+                  <Link onClick={toggleSidebar} href={"/#tentang-kami"}>
                     Tentang Kami
-                  </a>
+                  </Link>
                 </li>
                 <li className="hover:text-primary1 md:font-medium">
-                  <a onClick={toggleSidebar} href={"#layanan"}>
+                  <Link onClick={toggleSidebar} href={"/#layanan"}>
                     Layanan
-                  </a>
+                  </Link>
                 </li>
                 <li className="hover:text-primary1 md:font-medium">
-                  <a onClick={toggleSidebar} href={"#kontak"}>
+                  <Link onClick={toggleSidebar} href={"/#kontak"}>
                     Kontak
-                  </a>
+                  </Link>
+                </li>
+                <li className="hover:text-primary1 md:font-medium">
+                  <Link onClick={toggleSidebar} href={"/syarat-dan-ketentuan"}>
+                    Syarat & Ketentuan
+                  </Link>
                 </li>
               </ul>
             </motion.section>

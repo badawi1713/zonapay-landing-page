@@ -18,7 +18,7 @@ function About() {
             src={"/assets/images/img-mobile-preview.png"}
             width={170}
             height={300}
-            alt="zonapay-preview-2"
+            alt="zonapay-preview"
           />
           <Image
             className="mx-auto drop-shadow-xl md:hidden"
