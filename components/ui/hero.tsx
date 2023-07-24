@@ -5,6 +5,11 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 
 function Hero() {
+  const handleNavigate = () => {
+    const url =
+      "https://play.google.com/store/apps/details?id=com.zonapay&hl=id-ID";
+    window.open(url, "_blank");
+  };
   return (
     <header className="relative h-auto overflow-hidden bg-gradient-to-b from-gradientBlueX to-gradientBlueY lg:static lg:max-h-screen lg:min-h-screen">
       <div
@@ -14,7 +19,7 @@ function Hero() {
           backgroundImage: "url('/assets/images/icon-zonapay-logo.svg')",
         }}
       />
-      <div className="container flex h-full flex-col gap-0 py-8 lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pt-20">
+      <div className="container relative z-50 flex h-full flex-col gap-0 py-8 lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pt-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -26,7 +31,9 @@ function Hero() {
           <h5 className="mb-8 w-full font-light text-white xs:w-4/6 lg:w-2/3 2xl:text-xl">
             Pakai Zonapay, bebas bayar apa saja dan menguntungkan!
           </h5>
-          <Button className="w-full xs:w-auto">Coming Soon</Button>
+          <Button onClick={handleNavigate} className="w-full xs:w-auto">
+            Download Sekarang
+          </Button>
         </motion.div>
         <motion.div
           initial={{ scale: 0 }}
