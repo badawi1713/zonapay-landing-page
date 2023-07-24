@@ -19,7 +19,7 @@ function Hero() {
           backgroundImage: "url('/assets/images/icon-zonapay-logo.svg')",
         }}
       />
-      <div className="container relative z-50 flex h-full flex-col gap-0 py-8 lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pt-20">
+      <div className="container relative z-10 flex h-full flex-col gap-0 py-8 lg:h-screen lg:flex-row lg:items-center lg:justify-center lg:pt-20">
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
